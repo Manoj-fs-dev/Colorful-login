@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    min-height: 100vh;
+    background: linear-gradient(400deg,
+            #0DD9D9 10%,
+            #797FF2,
+            #e223a9 80%);
+
+}
+
+.shape-left {
+    position: absolute;
+    height: 400px;
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.12);
+
+
+    clip-path: polygon(0% 0%,
+            /* top left        X   Y  */
+            30% 0%,
+            /* top right       X   Y  */
+            100% 70%,
+            /* bottom right    X   Y  */
+            0% 100%
+            /* bottom left     X   Y  */
+        );
+}
+
+.shape-bottom {
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    height: 350px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.12);
+
+
+    clip-path: polygon(120% 0%,
+            /* top left        X   Y  */
+            72% 40%,
+            /* top right       X   Y  */
+            100% 100%,
+            /* bottom right    X   Y  */
+            0% 100%
+            /* bottom left     X   Y  */
+        );
+}
+
+.shape-right {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    height: 500px;
+    width: 300px;
+    background-color: rgba(86, 16, 107, 0.281);
+
+    clip-path: polygon(0% 15%,
+            /* top left        X   Y  */
+            100% 0%,
+            /* top right       X   Y  */
+            100% 100%,
+            /* bottom right    X   Y  */
+            100% 100%
+            /* bottom left     X   Y  */
+        );
+}
+
+.Login {
+    position: absolute;
+    top: 4.5%;
+    left: 33%;
+    width: 450px;
+    height: 700px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.Login h2 {
+    text-align: center;
+    margin: 25px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+.input-align{
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+#username,
+#password {
+    border: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: 0px;
+}
+
+
+#username:focus,
+#password:focus{
+    box-shadow: none;
+    border-color: black;
+}
+
+
+.bi-person {
+    position: absolute;
+    top: 21%;
+    left: 5%;
+}
+
+.bi-lock {
+    position: absolute;
+    top: 33.5%;
+    left: 5%;
+}
+
+
+.forgot-password a {
+    position: absolute;
+    top: 39%;
+    left: 64%;
+    text-decoration: none;
+    color: gray;
+}
+
+.button {
+    position: absolute;
+    top: 45%;
+    left: 9%;
+    width: 360px;
+    height: 40px;
+    border: 0px;
+    border-radius: 20px;
+    font-weight: 500;
+    background: linear-gradient(400deg,
+            #0DD9D9 10%,
+            #797FF2,
+            #e223a9 80%);
+    color: white;
+}
+
+.social-icon {
+    position: absolute;
+    top: 60%;
+    left: 31%;
+    font-size: 30px;
+}
+
+.bi-facebook {
+    margin: 10px;
+    color: #3b5998;
+}
+
+.bi-twitter-x {
+    margin: 10px;
+    color: black;
+}
+
+.bi-google {
+    margin: 10px;
+    color: black;
+}
+
+.footer{
+    position: absolute;
+    bottom: 100px;
+    left: 36%;
+
+}
+
+#button{
+    position: absolute;
+    top: 87%;
+    left: 45%;
+    border: 0px;
+    background-color: white;
+}
