@@ -1,182 +1,387 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+min-height: 100vh;
 }
+
+/* ================= BACKGROUND ================= */
 
 .background {
-    min-height: 100vh;
-    background: linear-gradient(400deg,
-            #0DD9D9 10%,
-            #797FF2,
-            #e223a9 80%);
+min-height: 100vh;
+position: relative;
+overflow: hidden;
+
+background: linear-gradient(
+    400deg,
+    #0DD9D9 10%,
+    #797FF2,
+    #e223a9 80%
+);
 
 }
 
+/* ================= SHAPES ================= */
+
 .shape-left {
-    position: absolute;
-    height: 400px;
-    width: 270px;
-    background-color: rgba(255, 255, 255, 0.12);
+position: absolute;
+top: 0;
+left: 0;
 
+width: 270px;
+height: 400px;
 
-    clip-path: polygon(0% 0%,
-            /* top left        X   Y  */
-            30% 0%,
-            /* top right       X   Y  */
-            100% 70%,
-            /* bottom right    X   Y  */
-            0% 100%
-            /* bottom left     X   Y  */
-        );
+background-color: rgba(255, 255, 255, 0.12);
+
+clip-path: polygon(
+    0% 0%,
+    30% 0%,
+    100% 70%,
+    0% 100%
+);
+
 }
 
 .shape-bottom {
-    position: absolute;
-    bottom: 0px;
-    right: 50%;
-    height: 350px;
-    width: 500px;
-    background-color: rgba(255, 255, 255, 0.12);
+position: absolute;
+bottom: 0;
+right: 50%;
 
+width: 500px;
+height: 350px;
 
-    clip-path: polygon(120% 0%,
-            /* top left        X   Y  */
-            72% 40%,
-            /* top right       X   Y  */
-            100% 100%,
-            /* bottom right    X   Y  */
-            0% 100%
-            /* bottom left     X   Y  */
-        );
+background-color: rgba(255, 255, 255, 0.12);
+
+clip-path: polygon(
+    120% 0%,
+    72% 40%,
+    100% 100%,
+    0% 100%
+);
+
 }
 
 .shape-right {
-    position: absolute;
-    right: 0px;
-    top: 100px;
-    height: 500px;
-    width: 300px;
-    background-color: rgba(86, 16, 107, 0.281);
+position: absolute;
+top: 100px;
+right: 0;
 
-    clip-path: polygon(0% 15%,
-            /* top left        X   Y  */
-            100% 0%,
-            /* top right       X   Y  */
-            100% 100%,
-            /* bottom right    X   Y  */
-            100% 100%
-            /* bottom left     X   Y  */
-        );
+width: 300px;
+height: 500px;
+
+background-color: rgba(86, 16, 107, 0.281);
+
+clip-path: polygon(
+    0% 15%,
+    100% 0%,
+    100% 100%,
+    100% 100%
+);
+
 }
+
+/* ================= LOGIN CARD ================= */
 
 .Login {
-    position: absolute;
-    top: 4.5%;
-    left: 33%;
-    width: 450px;
-    height: 700px;
-    background-color: white;
-    border-radius: 10px;
+position: relative;
+z-index: 2;
+
+width: min(450px, calc(100% - 30px));
+min-height: 700px;
+
+margin: 0 auto;
+top: 50px;
+
+background-color: white;
+border-radius: 10px;
+
+padding: 20px 30px 30px;
+
 }
+
+/* ================= HEADING ================= */
 
 .Login h2 {
-    text-align: center;
-    margin: 25px;
-    padding-top: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
+text-align: center;
+
+margin: 5px 0 35px;
+
+font-family: 'Poppins', sans-serif;
+font-weight: 900;
+
 }
 
-.input-align{
-    margin-left: 20px;
-    margin-right: 40px;
+/* ================= INPUT ================= */
+
+.input-align {
+position: relative;
+
+margin-left: 0;
+margin-right: 0;
+
 }
 
 #username,
 #password {
-    border: none;
-    border-bottom: 2px solid lightgray;
-    border-radius: 0px;
-}
+border: none;
+border-bottom: 2px solid lightgray;
+border-radius: 0;
 
+padding-left: 40px;
+
+}
 
 #username:focus,
-#password:focus{
-    box-shadow: none;
-    border-color: black;
+#password:focus {
+box-shadow: none;
+border-color: black;
 }
 
+/* ================= ICONS ================= */
 
-.bi-person {
-    position: absolute;
-    top: 21%;
-    left: 5%;
+.input-align i {
+position: absolute;
+
+left: 12px;
+top: 50%;
+
+transform: translateY(-50%);
+
+z-index: 2;
+
 }
 
-.bi-lock {
-    position: absolute;
-    top: 33.5%;
-    left: 5%;
-}
+/* ================= FORGOT PASSWORD ================= */
 
+.forgot-password {
+display: block;
+text-align: right;
+
+margin-top: 10px;
+
+}
 
 .forgot-password a {
-    position: absolute;
-    top: 39%;
-    left: 64%;
-    text-decoration: none;
-    color: gray;
+text-decoration: none;
+color: gray;
 }
 
+/* ================= LOGIN BUTTON ================= */
+
 .button {
-    position: absolute;
-    top: 45%;
-    left: 9%;
-    width: 360px;
-    height: 40px;
-    border: 0px;
-    border-radius: 20px;
-    font-weight: 500;
-    background: linear-gradient(400deg,
-            #0DD9D9 10%,
-            #797FF2,
-            #e223a9 80%);
-    color: white;
+width: 100%;
+height: 40px;
+
+margin-top: 25px;
+
+border: 0;
+border-radius: 20px;
+
+font-weight: 500;
+
+background: linear-gradient(
+    400deg,
+    #0DD9D9 10%,
+    #797FF2,
+    #e223a9 80%
+);
+
+color: white;
+
+}
+
+/* ================= SOCIAL ================= */
+
+.Login > p.position-absolute {
+position: static !important;
+
+transform: none !important;
+
+margin: 40px 0 15px !important;
+
+text-align: center;
+
 }
 
 .social-icon {
-    position: absolute;
-    top: 60%;
-    left: 31%;
-    font-size: 30px;
+position: static;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+font-size: 30px;
+
+}
+
+.social-icon a {
+text-decoration: none;
+}
+
+.bi-facebook,
+.bi-twitter-x,
+.bi-google {
+margin: 10px;
 }
 
 .bi-facebook {
-    margin: 10px;
-    color: #3b5998;
+color: #3b5998;
 }
 
 .bi-twitter-x {
-    margin: 10px;
-    color: black;
+color: black;
 }
 
 .bi-google {
-    margin: 10px;
-    color: black;
+color: black;
 }
 
-.footer{
-    position: absolute;
-    bottom: 100px;
-    left: 36%;
+/* ================= SIGNUP ================= */
+
+.footer {
+position: static;
+
+text-align: center;
+
+margin-top: 55px;
 
 }
 
-#button{
-    position: absolute;
-    top: 87%;
-    left: 45%;
-    border: 0px;
-    background-color: white;
+#button {
+display: block;
+
+margin: 10px auto 0;
+
+border: 0;
+background-color: white;
+
+font-weight: 600;
+
+}
+
+/* ================================================= /
+/ ================= TABLET ======================== /
+/ ================================================= */
+
+@media (max-width: 768px) {
+
+.Login {
+    width: min(450px, calc(100% - 40px));
+    min-height: 680px;
+
+    top: 30px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.shape-right {
+    width: 220px;
+    height: 400px;
+}
+
+.shape-bottom {
+    width: 400px;
+    height: 280px;
+}
+
+}
+
+/* ================================================= /
+/ ================= MOBILE ======================== /
+/ ================================================= */
+
+@media (max-width: 480px) {
+
+.background {
+    min-height: 100vh;
+}
+
+.Login {
+    width: calc(100% - 24px);
+
+    min-height: auto;
+
+    top: 20px;
+
+    padding: 20px 20px 30px;
+
+    border-radius: 12px;
+}
+
+.Login h2 {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    padding-left: 10px !important;
+}
+
+#username,
+#password {
+    padding-left: 40px;
+}
+
+.button {
+    margin-top: 25px;
+}
+
+.Login > p.position-absolute {
+    margin-top: 35px !important;
+}
+
+.social-icon {
+    font-size: 27px;
+}
+
+.footer {
+    margin-top: 45px;
+}
+
+/* Background shapes */
+.shape-left {
+    width: 150px;
+    height: 230px;
+}
+
+.shape-bottom {
+    width: 250px;
+    height: 180px;
+}
+
+.shape-right {
+    width: 150px;
+    height: 300px;
+    top: 50px;
+}
+
+}
+
+/* ================================================= /
+/ ============ VERY SMALL MOBILE ================== /
+/ ================================================= */
+
+@media (max-width: 360px) {
+
+.Login {
+    width: calc(100% - 16px);
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.social-icon {
+    font-size: 24px;
+}
+
+.bi-facebook,
+.bi-twitter-x,
+.bi-google {
+    margin: 7px;
+}
+
 }
