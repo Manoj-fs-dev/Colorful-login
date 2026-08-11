@@ -193,3 +193,85 @@ body {
 }
 
 
+/* ================= 800px ================= */
+
+@media (max-width: 800px) {
+
+    .Login {
+        width: 420px;
+    }
+
+    .button {
+        width: 340px;
+    }
+
+    .shape-right {
+        width: 220px;
+    }
+
+    .shape-bottom {
+        width: 400px;
+    }
+
+}
+
+
+/* ================= 400px ================= */
+
+@media (max-width: 200px) {
+
+    .Login {
+        width: 90%;
+        height: 700px;
+        padding: 20px;
+    }
+
+    .input-align {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .button {
+        width: 82%;
+        left: 9%;
+    }
+
+    .bi-person {
+        left: 7%;
+    }
+
+    .bi-lock {
+        left: 7%;
+    }
+
+    .forgot-password a {
+        left: auto;
+        right: 7%;
+    }
+
+    .social-icon {
+        left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer {
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #button {
+        left: 0;
+        width: 100%;
+    }
+
+    .shape-right {
+        display: none;
+    }
+
+    .shape-bottom {
+        width: 300px;
+    }
+
+}
