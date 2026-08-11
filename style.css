@@ -193,35 +193,10 @@ body {
 }
 
 
-/* ================= 800px ================= */
-
-@media (max-width: 800px) {
+@media (max-width: 400px) {
 
     .Login {
-        width: 420px;
-    }
-
-    .button {
-        width: 340px;
-    }
-
-    .shape-right {
-        width: 220px;
-    }
-
-    .shape-bottom {
-        width: 400px;
-    }
-
-}
-
-
-/* ================= 400px ================= */
-
-@media (max-width: 200px) {
-
-    .Login {
-        width: 90%;
+        width: calc(100% - 10px);
         height: 700px;
         padding: 20px;
     }
@@ -252,7 +227,7 @@ body {
     .social-icon {
         left: 0;
         width: 100%;
-        justify-content: center;
+        text-align: center;
     }
 
     .footer {
@@ -273,5 +248,4 @@ body {
     .shape-bottom {
         width: 300px;
     }
-
 }
