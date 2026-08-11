@@ -1,387 +1,196 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
-
-body {
-min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-/* ================= BACKGROUND ================= */
+html,
+body {
+width: 100%;
+min-height: 100%;
+}
+
+
 
 .background {
-min-height: 100vh;
-position: relative;
-overflow: hidden;
-
-background: linear-gradient(
-    400deg,
-    #0DD9D9 10%,
-    #797FF2,
-    #e223a9 80%
-);
-
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: linear-gradient(
+        400deg, 
+        #0DD9D9 10%, 
+        #797FF2, 
+        #e223a9 80%);
 }
 
-/* ================= SHAPES ================= */
-
 .shape-left {
-position: absolute;
-top: 0;
-left: 0;
-
-width: 270px;
-height: 400px;
-
-background-color: rgba(255, 255, 255, 0.12);
-
-clip-path: polygon(
-    0% 0%,
-    30% 0%,
-    100% 70%,
-    0% 100%
-);
-
+    position: absolute;
+    top: 0px;
+    height: 400px;
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.12);
+    clip-path: polygon(0% 0%,
+            /* top left X Y */
+            30% 0%,
+            /* top right X Y */
+            100% 70%,
+            /* bottom right X Y */
+            0% 100%
+            /* bottom left X Y */
+        );
 }
 
 .shape-bottom {
-position: absolute;
-bottom: 0;
-right: 50%;
-
-width: 500px;
-height: 350px;
-
-background-color: rgba(255, 255, 255, 0.12);
-
-clip-path: polygon(
-    120% 0%,
-    72% 40%,
-    100% 100%,
-    0% 100%
-);
-
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+    height: 350px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.12);
+    clip-path: polygon(120% 0%,
+            /* top left X Y */
+            72% 40%,
+            /* top right X Y */
+            100% 100%,
+            /* bottom right X Y */
+            0% 100%
+            /* bottom left X Y */
+        );
 }
 
 .shape-right {
-position: absolute;
-top: 100px;
-right: 0;
-
-width: 300px;
-height: 500px;
-
-background-color: rgba(86, 16, 107, 0.281);
-
-clip-path: polygon(
-    0% 15%,
-    100% 0%,
-    100% 100%,
-    100% 100%
-);
-
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    height: 500px;
+    width: 300px;
+    background-color: rgba(86, 16, 107, 0.281);
+    clip-path: polygon(0% 15%,
+            /* top left X Y */
+            100% 0%,
+            /* top right X Y */
+            100% 100%,
+            /* bottom right X Y */
+            100% 100%
+            /* bottom left X Y */
+        );
 }
-
-/* ================= LOGIN CARD ================= */
 
 .Login {
-position: relative;
-z-index: 2;
-
-width: min(450px, calc(100% - 30px));
-min-height: 700px;
-
-margin: 0 auto;
-top: 50px;
-
-background-color: white;
-border-radius: 10px;
-
-padding: 20px 30px 30px;
-
+    position: relative;
+    margin: auto;
+    width: 450px;
+    height: 700px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px 30px;
 }
 
-/* ================= HEADING ================= */
 
 .Login h2 {
-text-align: center;
-
-margin: 5px 0 35px;
-
-font-family: 'Poppins', sans-serif;
-font-weight: 900;
-
+    text-align: center;
+    margin: 25px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
 }
 
-/* ================= INPUT ================= */
-
 .input-align {
-position: relative;
-
-margin-left: 0;
-margin-right: 0;
-
+    margin-left: 20px;
+    margin-right: 40px;
 }
 
 #username,
 #password {
-border: none;
-border-bottom: 2px solid lightgray;
-border-radius: 0;
-
-padding-left: 40px;
-
+    border: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: 0px;
 }
 
 #username:focus,
 #password:focus {
-box-shadow: none;
-border-color: black;
+    box-shadow: none;
+    border-color: black;
 }
 
-/* ================= ICONS ================= */
-
-.input-align i {
-position: absolute;
-
-left: 12px;
-top: 50%;
-
-transform: translateY(-50%);
-
-z-index: 2;
-
+.bi-person {
+    position: absolute;
+    top: 23.5%;
+    left: 12%;
 }
 
-/* ================= FORGOT PASSWORD ================= */
-
-.forgot-password {
-display: block;
-text-align: right;
-
-margin-top: 10px;
-
+.bi-lock {
+    position: absolute;
+    top: 35.5%;
+    left: 12%;
 }
 
 .forgot-password a {
-text-decoration: none;
-color: gray;
+    position: absolute;
+    top: 41%;
+    left: 57%;
+    text-decoration: none;
+    color: gray;
 }
-
-/* ================= LOGIN BUTTON ================= */
 
 .button {
-width: 100%;
-height: 40px;
-
-margin-top: 25px;
-
-border: 0;
-border-radius: 20px;
-
-font-weight: 500;
-
-background: linear-gradient(
-    400deg,
-    #0DD9D9 10%,
-    #797FF2,
-    #e223a9 80%
-);
-
-color: white;
-
-}
-
-/* ================= SOCIAL ================= */
-
-.Login > p.position-absolute {
-position: static !important;
-
-transform: none !important;
-
-margin: 40px 0 15px !important;
-
-text-align: center;
-
+    position: absolute;
+    top: 46%;
+    left: 9%;
+    width: 360px;
+    height: 40px;
+    border: 0px;
+    border-radius: 20px;
+    font-weight: 500;
+    background: linear-gradient(400deg, #0DD9D9 10%, #797FF2, #e223a9 80%);
+    color: white;
 }
 
 .social-icon {
-position: static;
-
-display: flex;
-justify-content: center;
-align-items: center;
-
-font-size: 30px;
-
-}
-
-.social-icon a {
-text-decoration: none;
-}
-
-.bi-facebook,
-.bi-twitter-x,
-.bi-google {
-margin: 10px;
+    position: absolute;
+    top: 60%;
+    left: 31%;
+    font-size: 30px;
 }
 
 .bi-facebook {
-color: #3b5998;
+    margin: 10px;
+    color: #3b5998;
 }
 
 .bi-twitter-x {
-color: black;
+    margin: 10px;
+    color: black;
 }
 
 .bi-google {
-color: black;
+    margin: 10px;
+    color: black;
 }
 
-/* ================= SIGNUP ================= */
-
 .footer {
-position: static;
-
-text-align: center;
-
-margin-top: 55px;
-
+    position: absolute;
+    bottom: 100px;
+    left: 36%;
 }
 
 #button {
-display: block;
-
-margin: 10px auto 0;
-
-border: 0;
-background-color: white;
-
-font-weight: 600;
-
+    position: absolute;
+    top: 87%;
+    left: 45%;
+    border: 0px;
+    background-color: white;
 }
 
-/* ================================================= /
-/ ================= TABLET ======================== /
-/ ================================================= */
 
-@media (max-width: 768px) {
 
-.Login {
-    width: min(450px, calc(100% - 40px));
-    min-height: 680px;
+@media (max-width: 500px) {
+    .Login {
+        width: 90%;
+    }
 
-    top: 30px;
-
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.shape-right {
-    width: 220px;
-    height: 400px;
-}
-
-.shape-bottom {
-    width: 400px;
-    height: 280px;
-}
-
-}
-
-/* ================================================= /
-/ ================= MOBILE ======================== /
-/ ================================================= */
-
-@media (max-width: 480px) {
-
-.background {
-    min-height: 100vh;
-}
-
-.Login {
-    width: calc(100% - 24px);
-
-    min-height: auto;
-
-    top: 20px;
-
-    padding: 20px 20px 30px;
-
-    border-radius: 12px;
-}
-
-.Login h2 {
-    margin-top: 5px;
-    margin-bottom: 30px;
-}
-
-.form-label {
-    padding-left: 10px !important;
-}
-
-#username,
-#password {
-    padding-left: 40px;
-}
-
-.button {
-    margin-top: 25px;
-}
-
-.Login > p.position-absolute {
-    margin-top: 35px !important;
-}
-
-.social-icon {
-    font-size: 27px;
-}
-
-.footer {
-    margin-top: 45px;
-}
-
-/* Background shapes */
-.shape-left {
-    width: 150px;
-    height: 230px;
-}
-
-.shape-bottom {
-    width: 250px;
-    height: 180px;
-}
-
-.shape-right {
-    width: 150px;
-    height: 300px;
-    top: 50px;
-}
-
-}
-
-/* ================================================= /
-/ ============ VERY SMALL MOBILE ================== /
-/ ================================================= */
-
-@media (max-width: 360px) {
-
-.Login {
-    width: calc(100% - 16px);
-
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.social-icon {
-    font-size: 24px;
-}
-
-.bi-facebook,
-.bi-twitter-x,
-.bi-google {
-    margin: 7px;
-}
-
+    .button {
+        width: 82%;
+    }
 }
