@@ -5,9 +5,17 @@
 
 html,
 body {
-width: 100%;
-min-height: 100%;
-overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+
+    background: linear-gradient(
+        400deg,
+        #0DD9D9 10%,
+        #797FF2,
+        #e223a9 80%
+    );
 }
 
 
