@@ -193,61 +193,57 @@ body {
 }
 
 
-/* ================= 440px ================= */
+/* RESPONSIVE */
 
 @media screen and (orientation: portrait) {
 
     .Login {
-        width: calc(100% - 20px);
-        height: 700px;
-        padding: 20px;
-    }
+    width: 300px;
+    height: 700px;
+}
 
-    .input-align {
-        margin-left: 0;
-        margin-right: 0;
-    }
+.bi-person {
+    position: absolute;
+    top: 22.5%;
+    left: 16%;
+}
 
-    .button {
-        width: 82%;
-        left: 9%;
-    }
+.bi-lock {
+    position: absolute;
+    top: 35%;
+    left: 16%;
+}
 
-    .bi-person {
-        left: 7%;
-    }
+.forgot-password a {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+}
 
-    .bi-lock {
-        left: 7%;
-    }
+.button {
+    position: absolute;
+    left: 14%;
+    width: 200px;
+    height: 40px;
+}
 
-    .forgot-password a {
-        left: auto;
-        right: 7%;
-    }
+.social-icon {
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    font-size: 30px;
+}
 
-    .social-icon {
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
 
-    .footer {
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
+.footer {
+    position: absolute;
+    bottom: 100px;
+    left: 28%;
+}
 
-    #button {
-        left: 0;
-        width: 100%;
-    }
-
-    .shape-right {
-        display: none;
-    }
-
-    .shape-bottom {
-        width: 300px;
-    }
+#button {
+    position: absolute;
+    left: 42%;
+}
+    
 }
